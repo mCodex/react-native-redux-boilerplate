@@ -1,13 +1,14 @@
-import { createStore, applyMiddleware } from 'redux';
+import { compose, createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
 import rootReducer from '../reducers';
 
+export const sagaMiddleware = createSagaMiddleware();
 
-// If I import saga will break Redux middleware, I need to fix it.
-// let middleware = [createSagaMiddleware];
-
-let middleware = [];
+let middleware = [sagaMiddleware];
 
 if (__DEV__) {
   middleware = [...middleware, logger];
@@ -15,10 +16,20 @@ if (__DEV__) {
   middleware = [...middleware];
 }
 
-export default function configureStore(initialState) {
-  return createStore(
-    rootReducer,
+export function configureStore(initialState) {
+  const persistConfig = {
+    key: 'root',
+    storage,
+  };
+
+  const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+  const store = createStore(
+    persistedReducer,
     initialState,
     applyMiddleware(...middleware)
   );
+
+  persistStore(store);
+  return store;
 }

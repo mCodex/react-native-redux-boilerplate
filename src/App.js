@@ -1,11 +1,14 @@
 import { Provider } from 'react-redux';
 import { registerScreens } from './screens';
+import sagas from './sagas';
 
 import LoggedOff from './routes/loggedOff';
 
-import configureStore from './store';
+import { configureStore, sagaMiddleware } from './store';
 
 const store = configureStore();
+
+sagaMiddleware.run(sagas);
 
 registerScreens(store, Provider);
 

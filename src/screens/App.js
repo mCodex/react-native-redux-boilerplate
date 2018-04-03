@@ -7,8 +7,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import { connect } from 'react-redux'; /* code change */
-import { setText } from '../actions';
+import { connect } from 'react-redux';
+import { setText, getGoogle } from '../actions';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -43,7 +43,11 @@ export class App extends Component {
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
-        <TouchableOpacity onPress={() => this.props.changeText('Hello World')}>
+        <TouchableOpacity onPress={() => {
+          this.props.setText('Hello World');
+          return this.props.getGoogle();
+        }}
+        >
           <Text>Click on me!</Text>
         </TouchableOpacity>
         <Text>{this.props.text}</Text>
@@ -62,10 +66,4 @@ const mapStateToProps = state => ({
   text: state.testReducer.text
 });
 
-const mapDispatchToProps = dispatch => ({
-  changeText: (value) => {
-    dispatch(setText(value));
-  }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, { setText, getGoogle })(App);

@@ -1,8 +1,14 @@
-import { CHANGE_TEXT } from '../constants';
+import { CHANGE_TEXT, GET_GOOGLE } from '../constants';
 
 export function setText(text) { //eslint-disable-line
   return {
-    type: 'CHANGE_TEXT',
+    type: CHANGE_TEXT,
     text
+  };
+}
+
+export function getGoogle() { //eslint-disable-line
+  return {
+    type: GET_GOOGLE
   };
 }
