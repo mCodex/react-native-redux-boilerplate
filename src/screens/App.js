@@ -51,6 +51,7 @@ export class App extends Component {
           <Text>Click on me!</Text>
         </TouchableOpacity>
         <Text>{this.props.text}</Text>
+        <Text>{this.props.status}</Text>
         <Text style={styles.instructions}>
           To get started, edit App.js
         </Text>
@@ -63,7 +64,8 @@ export class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  text: state.testReducer.text
+  text: state.testReducer.text,
+  status: state.testReducer.status
 });
 
 export default connect(mapStateToProps, { setText, getGoogle })(App);
