@@ -9,6 +9,17 @@ This is a simple `react-native init` project with some libraries that I just ins
 * ESlint
 * Airbnb's ESlint rules
 
+
+## Installation
+
+Clone repo and run:
+
+```
+yarn
+cd ios/ && pod install
+cd .. && yarn start
+```
+
 ## Description
 
 Starting a new project can be take some time to configure project structure, libraries and so on... So, I decided to make this starter kit open-source for anyone who needs a little help.
