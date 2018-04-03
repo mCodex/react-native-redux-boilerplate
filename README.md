@@ -6,6 +6,7 @@ This is a simple `react-native init` project with some libraries that I just ins
 * React-Native-Navigation
 * Redux
 * Redux Saga
+* Redux Persist
 * ESlint
 * Airbnb's ESlint rules
 
