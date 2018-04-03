@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "globals": {
+    "__DEV__": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "rules": {
+    "comma-dangle": 0,
+    "spaced-comment": 0,
+    "camelcase": 0,
+    "no-param-reassign": 0,
+    "no-restricted-syntax": 0,
+    "new-cap": [2, { "capIsNewExceptions": ["Map"] }],
+    "no-underscore-dangle": 0,
+    "global-require": 0,
+    "no-nested-ternary": 0,
+    "no-multiple-empty-lines": [2, { "max": 2, "maxEOF": 1 }],
+    "prefer-template": 0,
+    "react/prop-types": 0, //remove soon
+    "react/prefer-stateless-function": 0,
+    "react/jsx-filename-extension": 0,
+    "react/no-array-index-key": 0,
+    "jsx-a11y/href-no-hash": "off",
+    "class-methods-use-this": "off",
+    "no-multi-assign": "off",
+    "no-else-return": ["error", { "allowElseIf": true }],
+    "max-len": 0,
+    no-unused-expressions: ["error", { "allowShortCircuit": true, "allowTernary": true }]
+  },
+  "plugins": ["react", "jest"],
+}
