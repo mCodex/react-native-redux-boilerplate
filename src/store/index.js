@@ -1,9 +1,9 @@
 import { compose, createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import logger from 'redux-logger';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import logger from 'redux-logger'; //eslint-disable-line
 
+import { offline } from '@redux-offline/redux-offline';
+import offlineConfig from '@redux-offline/redux-offline/lib/defaults';
 import rootReducer from '../reducers';
 
 export const sagaMiddleware = createSagaMiddleware();
@@ -17,19 +17,13 @@ if (__DEV__) {
 }
 
 export function configureStore(initialState) {
-  const persistConfig = {
-    key: 'root',
-    storage,
-  };
-
-  const persistedReducer = persistReducer(persistConfig, rootReducer);
-
   const store = createStore(
-    persistedReducer,
+    rootReducer,
     initialState,
-    applyMiddleware(...middleware)
+    compose(
+      applyMiddleware(...middleware),
+      offline(offlineConfig)
+    )
   );
-
-  persistStore(store);
   return store;
 }
