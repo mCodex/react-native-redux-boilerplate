@@ -1,4 +1,10 @@
+package com.reduxtemplate;
+
+import com.facebook.react.ReactPackage;
 import com.reactnativenavigation.NavigationApplication;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MainApplication extends NavigationApplication {
 
