@@ -1,5 +1,7 @@
 # React-Native Redux Boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mCodex/react-native-redux-boilerplate.svg)](https://greenkeeper.io/)
+
 This is a simple `react-native init` project with some libraries that I just installed myself and I use it on many projects as my "RN starter kit". This project includes out of the box:
 
 * React-Native
