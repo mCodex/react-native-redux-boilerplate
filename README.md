@@ -15,9 +15,21 @@ This is a simple `react-native init` project with some libraries that I just ins
 * ESlint
 * Airbnb's ESlint rules
 
+## Download
+
+You can download this boilerplate from command line:
+
+```bash
+git clone https://github.com/mCodex/react-native-redux-boilerplate.git
+```
+
+or you can download the releases from github's releases:
+
+https://github.com/mCodex/react-native-redux-boilerplate/releases
+
 ## Installation
 
-Clone repo and run:
+After you've downloaded RNReduxBoilerplate, go to its folder and type:
 
 ```
 yarn
