@@ -9,7 +9,7 @@
   "dependencies": {
     "@redux-offline/redux-offline": "^2.4.0",
     "react": "^16.4.1",
-    "react-native": "0.56.0",
+    "react-native": "0.56.1",
     "react-native-navigation": "^1.1.484",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
