@@ -1,0 +1,16 @@
+{
+  "upgrade": true,
+  "reject": [
+    "@babel/core",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-decorators",
+    "@babel/runtime",
+    "metro-react-native-babel-preset",
+    "react-native-device-info",
+    "react",
+    "schedule",
+    "eslint",
+    "eslint-plugin-react",
+    "eslint-plugin-jest"
+  ]
+}

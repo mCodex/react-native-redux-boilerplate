@@ -1,6 +1,7 @@
 package com.reduxtemplate;
 
 import com.facebook.react.ReactPackage;
+import com.facebook.soloader.SoLoader;
 import com.reactnativenavigation.NavigationApplication;
 
 import java.util.Arrays;
@@ -18,7 +19,7 @@ public class MainApplication extends NavigationApplication {
         // Add additional packages you require here
         // No need to add RnnPackage and MainReactPackage
         return Arrays.<ReactPackage>asList(
-            // eg. new VectorIconsPackage()
+                // new VectorIconsPackage()
         );
     }
 
@@ -29,6 +30,12 @@ public class MainApplication extends NavigationApplication {
 
     @Override
     public String getJSMainModuleName() {
-      return "index";
+        return "index";
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        SoLoader.init(this, /* native exopackage */ false);
     }
 }
