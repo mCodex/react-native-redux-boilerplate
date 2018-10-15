@@ -14,6 +14,10 @@ This is a simple `react-native init` project with some libraries. This project i
 * ESlint
 * Airbnb's ESlint rules
 
+## Description
+
+Starting a new project can take some time to configure project structure, libraries and so on... So, I decided to make this starter kit open source for anyone who needs a little help.
+
 ## Download
 
 You can download this boilerplate from command line:
@@ -36,6 +40,8 @@ cd ios/ && pod install
 cd .. && yarn start
 ```
 
-## Description
+## Tips
 
-Starting a new project can take some time to configure project structure, libraries and so on... So, I decided to make this starter kit open source for anyone who needs a little help.
+### jsc-android
+
+Android's react-native support is based on an old version of jsc-android (November of 2014) which is, basically, the JavaScript interpreter for Android, but we can update it ourselves to gain performance improvements. I've been doing it for a while and I've seen performance improvements. On the other hand, to update jsc-android you will have to support only versions of Android> 5.0, which nowadays seems fine. If you would like to give it a try, check this [NPM package](https://www.npmjs.com/package/jsc-android).
