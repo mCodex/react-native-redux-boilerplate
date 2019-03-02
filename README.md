@@ -1,13 +1,12 @@
 # React-Native Redux Boilerplate
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/mCodex/react-native-redux-boilerplate.svg)](https://greenkeeper.io/)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/mCodex/react-native-redux-boilerplate/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/mCodex/react-native-redux-boilerplate)
 
 This is a simple `react-native init` project with some libraries. This project includes out of the box:
 
 * React-Native
-* React-Native-Navigation
+* React-Native-Navigation v2
 * Redux
 * Redux Saga
 * Redux Offline

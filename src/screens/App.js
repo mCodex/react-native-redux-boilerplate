@@ -11,10 +11,10 @@ import { connect } from 'react-redux';
 import { setText, getGoogle } from '../actions';
 
 const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
+  ios: 'Press Cmd+R to reload,\n'
+    + 'Cmd+D or shake for dev menu',
+  android: 'Double tap R on your keyboard to reload,\n'
+    + 'Shake or press menu button for dev menu',
 });
 
 const styles = StyleSheet.create({
@@ -38,20 +38,27 @@ const styles = StyleSheet.create({
 
 export class App extends Component {
   render() {
+    const {
+      setTextDispatcher,
+      getGoogleDispatcher,
+      text,
+      status
+    } = this.props;
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
         <TouchableOpacity onPress={() => {
-          this.props.setText('Hello World');
-          return this.props.getGoogle();
+          setTextDispatcher('Hello World');
+          return getGoogleDispatcher();
         }}
         >
           <Text>Click on me!</Text>
         </TouchableOpacity>
-        <Text>{this.props.text}</Text>
-        <Text>{this.props.status}</Text>
+        <Text>{text}</Text>
+        <Text>{status}</Text>
         <Text style={styles.instructions}>
           To get started, edit App.js
         </Text>
@@ -68,4 +75,9 @@ const mapStateToProps = state => ({
   status: state.testReducer.status
 });
 
-export default connect(mapStateToProps, { setText, getGoogle })(App);
+const mapDispatchToProps = dispatch => ({
+  setTextDispatcher: text => dispatch(setText(text)),
+  getGoogleDispatcher: () => dispatch(getGoogle())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

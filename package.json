@@ -8,12 +8,12 @@
   },
   "dependencies": {
     "@redux-offline/redux-offline": "^2.4.0",
-    "react": "16.6.0-alpha.8af6728",
-    "react-native": "^0.57.3",
-    "react-native-navigation": "^1.1.489",
-    "react-redux": "^5.0.7",
+    "react": "16.6.3",
+    "react-native": "^0.58.6",
+    "react-native-navigation": "^2.13.1",
+    "react-redux": "^6.0.1",
     "redux": "^4.0.1",
-    "redux-saga": "^0.16.2"
+    "redux-saga": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.56",
@@ -21,15 +21,15 @@
     "@babel/runtime": "7.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "metro-react-native-babel-preset": "^0.49.0",
+    "babel-jest": "^24.1.0",
+    "metro-react-native-babel-preset": "^0.52.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.9.1",
-    "jest": "^23.6.0",
+    "jest": "^24.1.0",
     "react-test-renderer": "^16.5.2",
     "redux-logger": "^3.0.6"
   },
