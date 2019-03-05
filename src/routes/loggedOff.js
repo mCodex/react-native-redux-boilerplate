@@ -7,12 +7,17 @@ export default function LoggedOffRoutes() {
         children: [
           {
             component: {
-              id: 'homeComponent',
-              screen: 'home',
-            }
+              name: 'home',
+              options: {
+                topBar: {
+                  title: {
+                    text: 'Home'
+                  }
+                }
+              }
+            },
           }
-        ],
-        // options: {}
+        ]
       }
     }
   });
